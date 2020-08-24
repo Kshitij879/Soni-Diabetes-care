@@ -1,0 +1,113 @@
+<DOCTYPE html>
+<html>
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
+<style>
+input[type=text], select {
+
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+
+<head>
+  <script>
+
+      function doStuff()
+      {
+        var nameElement = document.getElementById("fname");
+        var fname = nameElement.value;
+        var nameElement = document.getElementById("phn");
+        var phn = nameElement.value;
+        var nameElement = document.getElementById("email");
+        var email = nameElement.value;
+
+        var nameElement = document.getElementById("doctor");
+        var doctor = nameElement.value;
+        var nameElement = document.getElementById("description");
+        var description = nameElement.value;
+        document.getElementById("someDiv").innerHTML +=  "Name =" + fname +"<br>"+" phn =" + phn+"<br>"+ " email = " + email+"<br>"+" doctor="+doctor+"<br>"+" description ="+description;
+        Email.send({
+    Host : "smtp.gmail.com",
+    Username : "tarunchanchal2020@gmail.com",
+    Password : "Wireless1996#",
+    To : 'kshitij.gupta_cs18@gla.ac.in',
+    From : "tarunchanchal2020@gmail.com",
+    Subject : "Name of patient " + fname,
+    Body : "Name =" + fname +"<br>"+" phn =" + phn+"<br>"+ " email = " + email+"<br>"+" doctor="+doctor+"<br>"+" description ="+description
+}).then(
+  message => alert(message)
+);
+      }
+
+  </script>
+</head>
+
+<html>
+
+  
+  <div>
+  
+    <label>Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    <br><br>
+
+    <label for="phn">mobile number</label>
+    <input type="text" id="phn" name="phn" placeholder="mobile number">
+    <br><br>
+
+    <label for="email">email_id</label>
+    <input type="text" id="email" name="phn" placeholder="Your email_id">
+    <br><br>
+
+
+    <label for="doctors">select you doctor</label>
+    <select id="doctor" name="doctor">
+      <option doctor1="doctor1">doctor1</option>
+      <option doctor2="doctor2">doctor2</option>
+      <option doctor3="doctor3">doctor3</option>
+    </select>
+    <br><br>
+  <label for="description">description </label>
+    <input type="text" id="description" name="ldescription" placeholder="Your description..">
+    <br><br>
+    
+  
+</div>
+<br><br><br><br>
+  
+<div id="someDiv">
+    the generated msg is = <br>
+  </div>
+
+  
+  <input type="button" value="button daba bc" onClick="doStuff()">
+
+  <br>    
+</html>
