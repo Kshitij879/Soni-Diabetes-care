@@ -5,7 +5,7 @@
     max-height: 600px;
     background-size: 100% 100% ;
     margin-bottom: 10px;
-    animation:slider 50s infinite  step-end;
+    animation:slider 80s infinite  ease-in-out;
     
 
   }
