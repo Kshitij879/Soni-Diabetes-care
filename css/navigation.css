@@ -13,11 +13,11 @@
     background-color: lightseagreen;
     padding: 10px;
     margin: 0px;
-    overflow: hidden;
   }
     .navbar li {
     list-style: none;
     display: inline-block;
+    position: relative;
   }
   .navbar li a {
     text-decoration: none;
@@ -74,3 +74,15 @@ color: white;
 background: red;
 color: rgb(238, 66, 66);
 } 
+.submenu{
+  position: absolute;
+  width: 300px;
+  left: 0;
+  background-color: lightseagreen;
+  z-index: 100;
+  text-align: left;
+  display: none;
+}
+.navbar li:hover .submenu{
+  display: block;
+}
