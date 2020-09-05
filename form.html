@@ -29,7 +29,7 @@
         box-sizing: border-box;
       }
       
-      button {
+      input[type = "button"] {
         display: block;
         width: 30%;
         background-color:black;
@@ -103,7 +103,7 @@
             Body:
               "Name =" +
               name +
-              "<p>" +
+              "<br>" +
               " phn =" +
               phn +
               "<br>" +
@@ -176,7 +176,7 @@
             </li>
           </ul>
         </div>
-        <div class="section" id="form"> FORM</div>
+        <div class="section" id="form1"> FORM</div>
         <div class="form" id="form">
           <form>
             <label>Name</label>
@@ -215,7 +215,7 @@
             placeholder="Your description.."
           />
           <br />
-          <button onclick="doStuff()">Submit</button>
+          <input type="button" value="Submit" onclick="doStuff()">
           </form>
         </div>
 
